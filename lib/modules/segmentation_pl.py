@@ -109,7 +109,7 @@ class UNetPL(UNet,pl.LightningModule):
         self.loss_fn_class = torch.nn.BCEWithLogitsLoss()
         self.setup_metrics()
 
-        # for metrics which require a list of predictions + gt
+        # for metrics (AUC, AP) which require a list of predictions + gt
         self.all_pred = []
         self.all_true = []
         
@@ -427,7 +427,7 @@ class UNetPlusPlusPL(UNetPlusPlus,pl.LightningModule):
         self.loss_fn_class = torch.nn.BCEWithLogitsLoss()
         self.setup_metrics()
 
-        # for metrics which require a list of predictions + gt
+        # for metrics (AUC, AP) which require a list of predictions + gt
         self.all_pred = []
         self.all_true = []
 
@@ -686,7 +686,7 @@ class BrUNetPL(BrUNet,pl.LightningModule):
         self.loss_fn_class = torch.nn.BCEWithLogitsLoss()
         self.setup_metrics()
 
-        # for metrics which require a list of predictions + gt
+        # for metrics (AUC, AP) which require a list of predictions + gt
         self.all_pred = []
         self.all_true = []
         
